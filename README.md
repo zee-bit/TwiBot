@@ -1,5 +1,13 @@
 # TwiBot
-## A twitter bot that can do automate your twitter account activity.
+## A twitter bot that can automate your twitter account activity.
+
+#### Features:
+- Search users.
+- Follow users.
+- Tweet/re-Tweet.
+- Follow your followers.
+- Autoreply to mentions and keywords.
+- Re-tweet your followers tweet.
 
 To use:
 
