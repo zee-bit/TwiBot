@@ -1,6 +1,6 @@
 TwiiterAPI.txt
 __pycache__
 testAuth.py
-venv
+venv/
 my_keys.json
 
