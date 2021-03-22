@@ -3,8 +3,9 @@
 
 import tweepy
 import logging
-from config import create_api
 import json
+
+from styles import in_color, styled_input
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
@@ -36,11 +37,12 @@ class FavRetweetListener(tweepy.StreamListener):
     def on_error(self, status):
         logger.error(status)
 
-def main(keywords):
-    api = create_api()
+def retweet(api):
+    keyword = styled_input("Enter keyword(s) to search seperated by space ─ ")
+    keyword = keyword.split(' ')
     tweets_listener = FavRetweetListener(api)
     stream = tweepy.Stream(api.auth, tweets_listener)
     stream.filter(track=keywords, languages=["en"])
 
 if __name__ == "__main__":
-    main(["Python", "Tweepy"])
+    retweet(api)
